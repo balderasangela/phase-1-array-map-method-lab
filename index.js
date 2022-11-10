@@ -12,5 +12,10 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map((torial) => {
+    const firstLetter = torial.split(" ")
+    return firstLetter.map((letter) => {
+      return letter.charAt(0).toUpperCase() + letter.slice(1)
+    }).join(" ")
+  })
 }
